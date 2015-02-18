@@ -1,0 +1,22 @@
+# regression_model_project
+*Executive Summary*
+*Exploratory Analysis*
+```r
+library(ggplot2)
+data(mtcars)
+head(mtcars)
+```r
+The next step was doing some basic exploratory analysis on the data. The boxplots are available as Figures [number-number] in Appendix 1. 
+```r
+mtcars$cyl <- as.factor(mtcars$cyl)
+mtcars$vs <- as.factor(mtcars$vs)
+mtcars$am <- factor(mtcars$am)
+mtcars$gear <- factor(mtcars$gear)
+mtcars$carb <- factor(mtcars$carb)
+attach(mtcars)
+```r
+
+*Regression Analysis*
+
+*Diagnositcs & Residuals*
+*Appendix 1: Figures*
