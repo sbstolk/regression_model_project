@@ -37,5 +37,15 @@ Whilst this model explains 77.9% of MPG variation between all characteristics, n
 stepModel <- step(fullModel, k=log(nrow(mtcars)))
 summary(stepModel)
 ```
+The ammended model which results is
+```r
+#lm(formula = mpg ~ wt + qsec + am, data = mtcars)
+```
+However, our earlier exploratory analysis indicates autocorrelation between weight (wt) and automatic transmission (am1). To address this, we can adjust the model as follows:
+
+```{r echo=FALSE, message=FALSE}
+interactModel <-lm(mpg ~ wt + qsec + am + wt:am, data=mtcars)
+summary(interactModel)
+```
 
 #Appendix 1
