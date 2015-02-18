@@ -1,4 +1,8 @@
 #Executive Summary
+The goal of this analysis is to determine, using the dataset mtcars, whether the type of transmission (automatic vs manual) has an effect of MPG. There are two key questions: 
+First, is manual or automatic transmission better for gas milage;
+Second, what is the magnitude of this effect, if any.
+The regression model demonstrates that cars with manual transmission have a higher MPG than automatic cars of the same weight and quarter-mile speed. 
 
 #Exploratory Analysis
 The first step was to load the data an examine the variables. 
