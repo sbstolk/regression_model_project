@@ -27,8 +27,15 @@ This demonstrates that cars with manual and automatic transmission have differen
 #Regression Analysis
 The first step is to model all variables against MPG. 
 
-```r echo=FALSE
+```{r echo = FALSE, message = FALSE}
 fullModel <- lm(mpg ~ ., data=mtcars)
 summary(fullModel)
 ```
+Whilst this model explains 77.9% of MPG variation between all characteristics, none of the individual characteristics shows a statistically significant p-value (ie, p <= 0.05). This means that we should winnow our variables in search of the key drivers of MPG variability. 
+
+```{r echo=FALSE, message = FALSE}
+stepModel <- step(fullModel, k=log(nrow(mtcars)))
+summary(stepModel)
+```
+
 #Appendix 1
